@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+</head>
+<style>
+    *{
+        background-color: #5C8374;
+    }
+    main{
+        background-color: black;
+        height: 600px;
+        background-size:cover;
+        display:flex;
+        justify-content: end;
+        align-items:center;
+        /* position:relative; */
+        
+    }
+    header{
+        border-radius: 10px;
+        border: 2px solid black;
+        width: 100%;
+        background-color:#5C8374;
+        font-size: 50px;
+        padding: 50px 0;
+        text-align: center;
+       
+
+    }
+    nav{
+        height: 60%;
+        left:0;
+        top:170px;
+        position: fixed;
+        width:15%;
+        /* overflow: hidden; */
+        z-index: 1;
+        
+        
+        
+        
+    }
+    nav ul {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        left:0;
+        border: 1px solid black;
+        font-size: 20px;
+        list-style: none;
+        padding:0px;
+       
+
+
+    }
+    nav li{
+        
+        left:0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        background-color: #183D3D;
+        
+    }
+    nav li:hover {
+        border: 1px solid black;
+        background-color: #5C8374;
+        
+
+    }
+    
+    
+    .box1{       
+        width:40%;
+        left: 240px;
+        height: 300px;
+        font-size: 30px;
+        background-color: black;
+        border:2px solid #5C8374;
+        border-radius: 10px;
+        padding:10px;
+        position: absolute;
+        text-shadow: 1px 1px 2px #5C8374, 0 0 0.6em rgb(255, 204, 0), 0 0 0.4em #ffee04;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        
+       
+    }
+    
+    .box1 div{
+        margin:0px;
+       
+        background-color: rgb(14, 13, 13);
+    }
+    .study{
+        border-radius: 50%;
+        background-repeat: none;
+        height: inherit;
+        width: 50%;
+        position: relative;
+        float: right;
+    }
+</style>
+<body>
+    <header>
+        <div>
+            My Education
+        </div>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li onmouseover="showBox1('college')" onmouseout ="hideBox('college')" >Under Graduate</li>
+                <li onmouseover="showBox1('high-scnd')" onmouseout ="hideBox('high-scnd')">High Secondary</li>
+                <li onmouseover="showBox1('HS')" onmouseout ="hideBox('HS')">High School</li>
+                <li onmouseover="showBox1('primary')" onmouseout ="hideBox('primary')">Primary Education</li>
+            </ul>
+        </nav>
+        <div class="box1" id="college">
+            <div> Degree- B.Tech</div>
+            <div>Institute - Baderia Global Institute of technology and Management, jabalpur</div>
+            <div>CGPA - 8.2</div>
+            <div>Graduation Year - 2025</div>
+        </div>
+        <div class="box1" id="high-scnd">
+            <div> Degree- 12TH(PCM)</div>
+            <div>Institute - Govt. High Secondary School Bhajiya</div>
+            <div>Percentage - 86%</div>
+            <div>Passing Year - 2020</div>
+        </div>
+        <div class="box1" id="HS">
+            <div> Degree- 10Th</div>
+            <div>Institute - Govt. High Secondary School Bhajiya</div>
+            <div>Percentage - 90%</div>
+            <div>Passing Year - 2018</div>
+        </div>
+        <div class="box1" id="primary">
+            <div> Hover here to know </div>
+            
+        </div>
+    
+        
+        <img src="study.jpg" alt="" class="study">
+    </main>
+    
+</body>
+<script>
+   function showBox1(x){       
+        document.getElementById(x).style.opacity = "1";  
+   }
+   function hideBox(x){       
+        document.getElementById(x).style.opacity = "0";  
+   }
+</script>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+</head>
+<style>
+    body{
+        background: url('project_back.jpg');
+        background-size: cover;
+    }
+    header{
+        border-radius: 10px;
+        border: 2px solid black;
+        width: 100%;
+        background-color:#5C8374;
+        font-size: 50px;
+        padding: 50px 0;
+        text-align: center;
+        color: rgb(2, 184, 250);   
+        background-color: transparent;
+        box-shadow: 2px 2px 14px rgb(31, 171, 247);
+        background-blend-mode:exclusion;
+    }
+    main{
+        height: 600px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main button img{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: transparent;
+        background-image: contain;
+    }
+    main button{
+        border: none;
+        background-color: transparent;
+
+    }
+    main button:hover{
+        opacity:0.5;
+    }
+    main ul{
+        width: 60%;
+        height: 400px;
+        border:2px solid rgb(76, 229, 81);
+        border-radius: 20px;
+        
+    }
+    main li{
+        list-style: none;
+        color: #5C8374;
+        
+
+    }
+    .project{
+        height: 100%;
+        width: 100%;
+        font-size: 30px;
+        text-align: start;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .info{
+        height: 80%;
+        width: 40%;
+        margin:15px;
+        text-shadow: 1px 1px 2px #282a5e, 0 0 0.6em rgb(217, 195, 107), 0 0 0.4em #ffee04;
+        color: rgb(255, 255, 255);
+    }
+    .info div{
+        margin:20px;
+    }
+    .project img{
+        position: relative;
+        height: 80%;
+        width: 50%;
+        box-shadow: 1px 1px 2px #b8b9ce, 0 0 0.6em rgb(139, 139, 138), 0 0 0.4em #eae9dc; ;
+        border-radius: 50%;  
+        border-color: #ffee04;
+        
+    }
+    .project mark{
+        padding:3px;
+        border-radius: 2px;
+        box-shadow: 13px 9px 0.3 green;
+        font-size: 30px; 
+        color:rgb(0, 250, 150);
+        background-color: transparent;
+       
+    }
+    
+
+</style>
+<body>
+    <header>
+        My Pojects
+    </header>
+    <main>
+        <button><img src="prev.png" alt="" onclick="showProject(-1)"></button>
+        <ul>
+            <li class="project">
+                <div class="info"><mark >Project 1</mark>
+                    <div><mark> Name</mark> : Slang Finder</div>
+                    <div><mark> Discription</mark> : It is a dictionary used to find the slang words fullform used in internet</div>
+                    <div><mark >Technology used </mark>: Java</div>
+                </div>
+               <img src="Slang.png" alt="">
+            </li>
+            <li class="project">
+                <div class="info"><mark >Project 2</mark>
+                    <div><mark > Name</mark> :Child Literacy </div>
+                    <div><mark> Discription</mark> : It is a dictionary used to find the slang words fullform used in internet</div>
+                    <div><mark>Technology used </mark>: HTML,CSS</div>
+                </div>
+                <img src="child.jpg" alt="">
+            </li>
+            <li class="project"><div class="info"><mark >Project 3</mark>
+                <div><mark > Name</mark> : Amazon Replica</div>
+                <div><mark > Discription</mark> : It is a dictionary used to find the slang words fullform used in internet</div>
+                <div><mark >Technology used </mark>: Html,Css</div>
+            </div>
+           <img src="amazon.webp" alt=""></li>
+            <li class="project"><div class="info"><mark >Project 4</mark>
+                <div><mark> Name</mark> : Tic Tac Toe</div>
+                <div><mark> Discription</mark> : It is a dictionary used to find the slang words fullform used in internet</div>
+                <div><mark >Technology used </mark>: Html,Css,JavaScript</div>
+            </div>
+           <img src="ttt.webp" alt=""></li>
+        </ul>
+        <button ><img src="next.png" alt="" onclick ="showProject(1)"></button>
+    </main>
+</body>
+<script>    
+    var ind = 1;
+    showPic(ind);
+    
+    function showProject(n){
+        showPic(ind+=n);
+        
+    }
+
+    function showPic(n){
+       var projects = document.getElementsByClassName("project");
+        if(n<1)ind = projects.length;
+        if(n>projects.length)ind =1;
+        for(var i=0; i<projects.length;i++){
+            projects[i].style.display = "none";
+            
+        }
+        projects[ind-1].style.display = "flex";
+        
+    }    
+    
+</script>
+</html>

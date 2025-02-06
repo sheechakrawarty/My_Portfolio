@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications</title>
+</head>
+<style>
+    body{
+        height: max-content;
+        background-image: url('c2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    header{
+        border-radius: 10px;
+        border: 2px solid black;
+        width: 100%;
+        color:rgb(245, 176, 3);
+        font-size: 50px;
+        padding: 50px 0;
+        text-align: center;
+        text-shadow: 1px 2px 10px rgb(204, 204, 2); 
+        box-shadow: 2px 2px 10px rgb(255, 255, 54);
+
+    }
+    header div{
+        background-color:transparent;
+        
+    }
+    .boxes{
+        position: relative;
+        margin-top:100px ;
+        left: 10%;
+        height: 250px;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .box{
+        padding: 10px;
+        position:relative;
+        height:100%;
+        width:30%;
+        border: 2px solid yellow;
+        background-color: bisque;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 30px;
+    }
+       
+    .box:hover{
+        box-shadow: 3px 4px 1px black;
+        border: 10px ridge rgb(71, 11, 223);
+    }
+    #ibm,#Networking, #digital,#cloudAWS,#glc,#cisco{
+        background-image: none;
+        background-size: cover;
+        
+        box-shadow: 2px 4px 15px rgb(0, 0, 0);
+        
+    }
+    
+    #ibm:hover{
+        background-image: url('ibm.jpg');
+        font-size: 0px;
+        
+        
+    }
+    #Networking:hover {
+        background-image: url('network.jpg');font-size: 0px;
+        
+    }
+    #digital:hover {
+        background-image: url('dm.jpg');font-size: 0px;
+    }
+    #glc:hover {
+        background-image: url('UI_UX.jpg');font-size: 0px;
+    }
+    #cloudAWS:hover {
+        background-image: url('aws.png');font-size: 0px;
+    }
+    #cisco:hover {
+        background-image: url('C.jpg');font-size: 0px;
+        
+    }
+    .add{
+        position:relative;
+        align-self: center;
+        height: 50px;
+        width: 100px;
+        border: 2px solid black;
+        left:48%;
+        margin-top: 40px;
+        background-color: goldenrod;
+         
+    }
+    .add:hover{
+        position: relative;
+        top:5px;
+        background-color: gold;
+    }
+
+
+</style>
+<body>
+    <header>
+        <div>
+            My Certifications
+        </div>
+    </header>
+    <main>
+        <div class="boxes">
+            <div class="box" id = "ibm" > IBM Certified in AI </div>
+            <div class = "box" id="Networking">Cisco Certified in Networking</div>
+        </div>
+        <div class="boxes">
+            <div class="box" id="digital">Google Certified in digital Marketing</div>
+            <div class = "box" id="cloudAWS">AWS certified in AWS Cloud </div>
+        </div>
+        <div class="boxes">
+            <div class="box" id="glc">Great learning Certified in UI/UX</div>
+            <div class = "box" id="cisco">Cisco Certified in C programming</div>
+        </div>
+
+        <button class = "add" name="add more">Add new</button>
+        
+    </main>
+</body>
+
+</html>
